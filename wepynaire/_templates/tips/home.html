@@ -18,12 +18,12 @@
 </div>
 
 <div class="container">
-  <p class="p-3 text-center">
-    <a href="{% url 'home' %}"><span class="badge bg-primary col text-light">Toutes</span> </a>
+  <div class="p-3 text-center d-flex justify-content-center">
+    <a class="btn btn-primary mx-1 text-light" href="{% url 'home' %}">Toutes</a>
     {% for category in categories %}
-      <a href="{% url 'home' %}?category={{ category.slug }}"><span class="badge bg-primary col text-light">{{ category.name | title }}</span> </a>
+    <a class="btn btn-primary mx-1 text-light" href="{% url 'home' %}?category={{ category.slug }}">{{ category.name | title }}</a>
     {% endfor %}
-  </p>
+    </div>
   <div class="row" data-masonry='{"percentPosition": true }'>
     {% for tip in tips %}
     <div class="col-lg-4 col-sm-6">
