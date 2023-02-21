@@ -13,6 +13,7 @@ django-environ = "*"
 django-markdownify = "*"
 pygments = "*"
 pillow = "*"
+gunicorn = "*"
 
 [dev-packages]
 
