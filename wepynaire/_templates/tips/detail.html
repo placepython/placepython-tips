@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load static markdownify %} 
+
+{% block title %} {{ tip.title }} | PlacePython {% endblock title %} 
+
+{% block content %}
+<div class="container">
+    <div class="row mb-3 align-items-center" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('{% static '/vendors/images/placepython-illustration-man.svg' %}'); background-size: 100%; background-position: center;">
+        <h1 class="col-md-8 text-center order-md-last">ASTUCE: {{ tip.title }}</h1>
+        <div class="col-md-4 mb-3 order-md-first">
+            <a data-bs-toggle="modal" data-bs-target="#{{ tip.slug }}">
+                <img
+                  src="{{ tip.image.url }}"
+                  class="img-fluid"
+                  alt="tip image or source code"
+                  style="cursor: pointer;"
+                />
+            </a>
+        </div>
+    </div>
+    <div class="bg-secondary p-4 mb-3 rounded-4">
+        <h2>Résumé</h2>
+        {{ tip.summary | markdownify }}
+    </div>
+    <div class="p-4 mb-3 border border-secondary border-2 rounded-4">
+        <h2>L'astuce en détail</h2>
+        {{ tip.body | markdownify }}
+    </div>
+</div>
+{% endblock content %}
+
+
+{% block modal %} 
+<div
+    class="modal fade"
+    id="{{ tip.slug }}"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+>
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img class="img-fluid" src="{{ tip.image.url }}" alt="source code screenshot">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock modal %}

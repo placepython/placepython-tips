@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-extensions = "*"
+python-webpack-boilerplate = "*"
+crispy-bootstrap5 = "*"
+psycopg2 = "*"
+django-environ = "*"
+django-markdownify = "*"
+pygments = "*"
+pillow = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

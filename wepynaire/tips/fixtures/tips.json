@@ -1,0 +1,87 @@
+[
+{
+  "model": "tips.category",
+  "pk": 1,
+  "fields": {
+    "name": "Python",
+    "slug": "python"
+  }
+},
+{
+  "model": "tips.category",
+  "pk": 2,
+  "fields": {
+    "name": "Fondamentaux",
+    "slug": "fondamentaux"
+  }
+},
+{
+  "model": "tips.tip",
+  "pk": 1,
+  "fields": {
+    "title": "Comparaison de différents types de vues",
+    "slug": "astuce-python-du-jour",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in diam lorem. Duis lobortis cursus massa, id sagittis tortor vulputate nec. Phasellus vitae augue dapibus, faucibus ex id, sollicitudin eros. Praesent ultrices, arcu eget euismod maximus, enim nunc consectetur est, vitae commodo tortor sem eu lectus...",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in diam lorem. Duis lobortis cursus massa, id sagittis tortor vulputate nec. Phasellus vitae augue dapibus, faucibus ex id, sollicitudin eros. Praesent ultrices, arcu eget euismod maximus, enim nunc consectetur est, vitae commodo tortor sem eu lectus. Ut in orci a velit porttitor viverra ut et mi. Ut dapibus suscipit elit vitae faucibus. Nullam pharetra augue non dolor maximus tincidunt. Aliquam erat volutpat. Pellentesque varius tempor semper. Curabitur ut aliquet mi. Proin blandit ultrices augue imperdiet rhoncus. In dapibus sem non porttitor vulputate. Vestibulum vel pulvinar risus. Suspendisse sollicitudin nibh vel urna pulvinar varius. Sed odio nisi, accumsan vel eleifend non, faucibus at velit. Suspendisse at justo volutpat, venenatis magna ac, pharetra nunc.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in diam lorem. Duis lobortis cursus massa, id sagittis tortor vulputate nec. Phasellus vitae augue dapibus, faucibus ex id, sollicitudin eros. Praesent ultrices, arcu eget euismod maximus, enim nunc consectetur est, vitae commodo tortor sem eu lectus. Ut in orci a velit porttitor viverra ut et mi. Ut dapibus suscipit elit vitae faucibus. Nullam pharetra augue non dolor maximus tincidunt. Aliquam erat volutpat. Pellentesque varius tempor semper. Curabitur ut aliquet mi. Proin blandit ultrices augue imperdiet rhoncus. In dapibus sem non porttitor vulputate. Vestibulum vel pulvinar risus. Suspendisse sollicitudin nibh vel urna pulvinar varius. Sed odio nisi, accumsan vel eleifend non, faucibus at velit. Suspendisse at justo volutpat, venenatis magna ac, pharetra nunc.",
+    "author": 1,
+    "image": "tips/images/astuce-attrgetter.png",
+    "created_at": "2023-02-20T16:38:48.282Z",
+    "updated_at": "2023-02-20T16:44:20.018Z",
+    "categories": [
+      1
+    ]
+  }
+},
+{
+  "model": "tips.tip",
+  "pk": 2,
+  "fields": {
+    "title": "Utiliser un décorateur",
+    "slug": "astuce-python-du-jour-2",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in diam lorem. Duis lobortis cursus massa, id sagittis tortor vulputate nec. Phasellus vitae augue dapibus, faucibus ex id, sollicitudin eros. Praesent ultrices, arcu eget euismod maximus, enim nunc consectetur est, vitae commodo tortor sem eu lectus. Ut in orci a velit porttitor viverra ut et mi.",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in diam lorem. Duis lobortis cursus massa, id sagittis tortor vulputate nec. Phasellus vitae augue dapibus, faucibus ex id, sollicitudin eros. Praesent ultrices, arcu eget euismod maximus, enim nunc consectetur est, vitae commodo tortor sem eu lectus. Ut in orci a velit porttitor viverra ut et mi. Ut dapibus suscipit elit vitae faucibus. Nullam pharetra augue non dolor maximus tincidunt. Aliquam erat volutpat. Pellentesque varius tempor semper. Curabitur ut aliquet mi. Proin blandit ultrices augue imperdiet rhoncus. In dapibus sem non porttitor vulputate. Vestibulum vel pulvinar risus. Suspendisse sollicitudin nibh vel urna pulvinar varius. Sed odio nisi, accumsan vel eleifend non, faucibus at velit. Suspendisse at justo volutpat, venenatis magna ac, pharetra nunc.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in diam lorem. Duis lobortis cursus massa, id sagittis tortor vulputate nec. Phasellus vitae augue dapibus, faucibus ex id, sollicitudin eros. Praesent ultrices, arcu eget euismod maximus, enim nunc consectetur est, vitae commodo tortor sem eu lectus. Ut in orci a velit porttitor viverra ut et mi. Ut dapibus suscipit elit vitae faucibus. Nullam pharetra augue non dolor maximus tincidunt. Aliquam erat volutpat. Pellentesque varius tempor semper. Curabitur ut aliquet mi. Proin blandit ultrices augue imperdiet rhoncus. In dapibus sem non porttitor vulputate. Vestibulum vel pulvinar risus. Suspendisse sollicitudin nibh vel urna pulvinar varius. Sed odio nisi, accumsan vel eleifend non, faucibus at velit. Suspendisse at justo volutpat, venenatis magna ac, pharetra nunc.",
+    "author": 1,
+    "image": "tips/images/astuce-decorateur-wraps.png",
+    "created_at": "2023-02-20T16:42:37.539Z",
+    "updated_at": "2023-02-20T16:42:56.847Z",
+    "categories": [
+      1
+    ]
+  }
+},
+{
+  "model": "tips.tip",
+  "pk": 3,
+  "fields": {
+    "title": "Parcourir plusieurs séquences en parallèle",
+    "slug": "parcourir-plusieurs-sequences-en-parallele",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in diam lorem. Duis lobortis cursus massa, id sagittis tortor vulputate nec. Phasellus vitae augue dapibus, faucibus ex id, sollicitudin eros. Praesent ultrices, arcu eget euismod maximus, enim nunc consectetur est, vitae commodo tortor sem eu lectus. Ut in orci a velit porttitor viverra ut et mi.",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in diam lorem. Duis lobortis cursus massa, id sagittis tortor vulputate nec. Phasellus vitae augue dapibus, faucibus ex id, sollicitudin eros. Praesent ultrices, arcu eget euismod maximus, enim nunc consectetur est, vitae commodo tortor sem eu lectus. Ut in orci a velit porttitor viverra ut et mi. \r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in diam lorem. Duis lobortis cursus massa, id sagittis tortor vulputate nec. Phasellus vitae augue dapibus, faucibus ex id, sollicitudin eros. Praesent ultrices, arcu eget euismod maximus, enim nunc consectetur est, vitae commodo tortor sem eu lectus. Ut in orci a velit porttitor viverra ut et mi. \r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in diam lorem. Duis lobortis cursus massa, id sagittis tortor vulputate nec. Phasellus vitae augue dapibus, faucibus ex id, sollicitudin eros. Praesent ultrices, arcu eget euismod maximus, enim nunc consectetur est, vitae commodo tortor sem eu lectus. Ut in orci a velit porttitor viverra ut et mi.",
+    "author": 1,
+    "image": "tips/images/astuce-decimal.png",
+    "created_at": "2023-02-20T16:44:58.643Z",
+    "updated_at": "2023-02-21T07:08:06.594Z",
+    "categories": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "tips.tip",
+  "pk": 4,
+  "fields": {
+    "title": "Les décorateurs avec wraps",
+    "slug": "les-decorateurs-avec-wraps",
+    "summary": "Lorem ipsum dolor **sit amet**, consectetur adipiscing elit. Donec in diam lorem. Duis lobortis cursus massa, id sagittis tortor vulputate nec. Phasellus vitae augue dapibus, faucibus ex id, sollicitudin eros. Praesent ultrices, arcu eget euismod maximus, enim nunc consectetur est, vitae commodo tortor sem eu lectus. Ut in orci a velit porttitor `viverra ut et mi?`.\r\n\r\n```python\r\nfrom pathlib import Path\r\n\r\nimport environ\r\n\r\nenv = environ.Env(\r\n    DEBUG=(bool, False),\r\n)\r\n```",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in diam lorem. Duis lobortis cursus massa, id sagittis tortor vulputate nec. Phasellus vitae augue dapibus, faucibus ex id, sollicitudin eros. Praesent ultrices, arcu eget euismod maximus, enim nunc consectetur est, vitae commodo tortor sem eu lectus. Ut in orci a velit porttitor viverra ut et mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in diam lorem. Duis lobortis cursus massa, id sagittis tortor vulputate nec. Phasellus vitae augue dapibus, faucibus ex id, sollicitudin eros. Praesent ultrices, arcu eget euismod maximus, enim nunc consectetur est, vitae commodo tortor sem eu lectus. Ut in orci a velit porttitor viverra ut et mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in diam lorem. Duis lobortis cursus massa, id sagittis tortor vulputate nec. Phasellus vitae augue dapibus, faucibus ex id, sollicitudin eros. Praesent ultrices, arcu eget euismod maximus, enim nunc consectetur est, vitae commodo tortor sem eu lectus. Ut in orci a velit porttitor viverra ut et mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in diam lorem. Duis lobortis cursus massa, id sagittis tortor vulputate nec. Phasellus vitae augue dapibus, faucibus ex id, sollicitudin eros. Praesent ultrices, arcu eget euismod maximus, enim nunc consectetur est, vitae commodo tortor sem eu lectus. Ut in orci a velit porttitor viverra ut et mi.",
+    "author": 1,
+    "image": "tips/images/astuce-else-for.png",
+    "created_at": "2023-02-20T16:45:33.331Z",
+    "updated_at": "2023-02-20T18:26:10.548Z",
+    "categories": [
+      1
+    ]
+  }
+}
+]

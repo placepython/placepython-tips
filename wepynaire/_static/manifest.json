@@ -1,0 +1,30 @@
+{
+  "app.css": "/static/css/app.b9aa31f8ce3436d7ec42.css",
+  "app.js": "/static/js/app.ea4c5223.js",
+  "css/app.b9aa31f8ce3436d7ec42.css.map": "/static/css/app.b9aa31f8ce3436d7ec42.css.map",
+  "entrypoints": {
+    "app": {
+      "assets": {
+        "js": [
+          "/static/js/runtime.eb50bafc.js",
+          "/static/js/577.7e80cd10.js",
+          "/static/js/app.ea4c5223.js"
+        ],
+        "css": [
+          "/static/css/app.b9aa31f8ce3436d7ec42.css"
+        ]
+      }
+    }
+  },
+  "js/577.7e80cd10.js": "/static/js/577.7e80cd10.js",
+  "js/577.7e80cd10.js.LICENSE.txt": "/static/js/577.7e80cd10.js.LICENSE.txt",
+  "js/577.7e80cd10.js.map": "/static/js/577.7e80cd10.js.map",
+  "js/runtime.eb50bafc.js.map": "/static/js/runtime.eb50bafc.js.map",
+  "runtime.js": "/static/js/runtime.eb50bafc.js",
+  "vendors/.DS_Store": "/static/vendors/.DS_Store",
+  "vendors/.gitkeep": "/static/vendors/.gitkeep",
+  "vendors/images/.gitkeep": "/static/vendors/images/.gitkeep",
+  "vendors/images/placepython-illustration-girl.svg": "/static/vendors/images/placepython-illustration-girl.svg",
+  "vendors/images/placepython-illustration-man.svg": "/static/vendors/images/placepython-illustration-man.svg",
+  "vendors/images/placepython.svg": "/static/vendors/images/placepython.svg"
+}

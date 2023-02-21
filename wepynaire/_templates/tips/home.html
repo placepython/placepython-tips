@@ -1,0 +1,80 @@
+{% extends 'base.html' %} 
+
+{% load static markdownify %} 
+
+{% block title %}Accueil WePynaire | PlacePython {% endblock title %} 
+
+
+{% block content %}
+<div class="container flex-grow-1">
+  <h1 class="text-center">
+    Bienvenue à la découverte des astuces de PlacePython
+  div
+  <img
+    class="w-100"
+    src="{% static '/vendors/images/placepython-illustration-girl.svg' %}"
+    alt="développeuse placepython"
+  />
+</div>
+
+<div class="container">
+  <p class="p-3 text-center">
+    <a href="{% url 'home' %}"><span class="badge bg-primary col text-light">Toutes</span> </a>
+    {% for category in categories %}
+      <a href="{% url 'home' %}?category={{ category.slug }}"><span class="badge bg-primary col text-light">{{ category.name | title }}</span> </a>
+    {% endfor %}
+  </p>
+  <div class="row" data-masonry='{"percentPosition": true }'>
+    {% for tip in tips %}
+    <div class="col-lg-4 col-sm-6">
+      <div class="card p-2 m-2">
+        <a data-bs-toggle="modal" data-bs-target="#{{ tip.slug }}">
+        <img
+          src="{{ tip.image.url }}"
+          class="card-img-top"
+          alt="tip source code screenshot"
+          style="cursor: pointer;"
+        />
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">{{ tip.title }}</h5>
+          <div>
+            {% for category in tip.categories.all %}
+            <span class="badge bg-secondary col text-dark">{{ category.name }}</span> 
+            {% endfor %}
+          </div>
+          <p class="card-text">{{ tip.summary | markdownify }}</p>
+          <a href="{% url 'tips:detail' slug=tip.slug %}" class="btn btn-primary text-white">Lire plus</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %} 
+
+
+{% block modal %} 
+    {% for tip in tips %}
+    <div
+    class="modal fade"
+    id="{{ tip.slug }}"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+    >
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img class="img-fluid" src="{{ tip.image.url }}" alt="source code screenshot">
+            </div>
+        </div>
+    </div>
+    </div>
+    {% endfor %} 
+{% endblock modal %}
+
+{% block bottom_scripts %}
+    {{ block.super }}
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+  {% endblock bottom_scripts %}

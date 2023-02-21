@@ -1,0 +1,41 @@
+{% load webpack_loader static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{% block title %}WePynaire | PlacePython{% endblock title %}</title>
+
+  {% block head_styles %}
+    <!-- Bootstrap CSS -->
+    {% stylesheet_pack 'app' %}
+  {% endblock head_styles %}
+
+  {% block head_scripts %}{% endblock head_scripts %}
+  
+</head>
+<body class="{% block body_classes %}min-vh-100 d-flex flex-column{% endblock body_classes %}">
+
+  {% block nav %}{% include 'fragments/navigation.html' %}{% endblock nav %}
+
+  {% block outer_content %}
+  <main class="flex-grow-1">
+    {% block content %}{% endblock content %}
+  </main>
+  {% endblock outer_content %}
+
+  {% block footer %}{% include 'fragments/footer.html' %}{% endblock footer %}
+
+  {% block modal %}{% endblock modal %}
+
+  {% block bottom_scripts %}
+    <!-- Bootstrap JS -->
+    {% javascript_pack 'app' %}
+  {% endblock bottom_scripts %}
+
+</body>
+</html>

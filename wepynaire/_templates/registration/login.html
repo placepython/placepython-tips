@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Connexion | PlacePython{% endblock title %}
+
+{% block content %}
+<main class="container flex-grow-1">
+    <form method="post" class="row">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-primary text-white" type="submit">Me connecter</button>
+    </form>
+</main>
+{% endblock content %}
