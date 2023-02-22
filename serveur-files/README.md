@@ -36,6 +36,33 @@ En résumé, l'utilisation de Nginx en combinaison avec Gunicorn peut offrir une
 
 ## La configuration de Nginx
 
-Sur le serveur, notre fichier de configuration de nginx se situe dans le répertoire `/etc/nginx/sites-available`. Le fichier [wepynaire](wepynaire) donne un exemple de configuration opérationnelle.
+Sur le serveur, notre fichier de configuration de nginx se situe dans le répertoire `/etc/nginx/sites-available/`. Le fichier [wepynaire](wepynaire) donne un exemple de configuration opérationnelle.
 
 Une fois ce fichier ajouté dans `/etc/nginx/sites-enabled/` à l'aide de la commande `ln -s /etc/nginx/sites-available/wepynaire /etc/nginx/sites-enabled/`, il est nécessaire de redémarrer nginx à l'aide de la commande `sudo systemctl reload nginx`.
+
+## La configuration de gunicorn via supervisor
+
+Sur notre serveur, nous configurons notre serveur WSGI, gunicorn, par l'intermédiaire de l'outil supervisor et d'un de ces fichier de configuration. 
+
+### A quoi sert supervisor ?
+
+Supervisor est un outil open-source pour superviser et contrôler les processus de système sous Linux. Dans le contexte du déploiement d'une application Django avec Gunicorn, Supervisor peut offrir plusieurs avantages :
+
+- **Gestion de processus** : Supervisor peut gérer les processus Gunicorn de manière fiable et les redémarrer automatiquement en cas de panne ou d'erreur. Cela permet de garantir que votre application reste disponible et réactive, même en cas de problèmes de serveur.
+
+- **Automatisation** : Supervisor peut être configuré pour démarrer automatiquement les processus Gunicorn lors du démarrage du serveur, ce qui peut réduire le temps de configuration et simplifier la gestion des processus.
+
+- **Surveillance** : Supervisor peut surveiller les processus Gunicorn en cours d'exécution et fournir des informations sur leur état et leur activité. Cela permet de diagnostiquer rapidement les problèmes et d'optimiser les performances de l'application.
+
+- **Facilité de configuration** : Supervisor est facile à configurer et à utiliser, avec une syntaxe simple et lisible pour la définition des processus.
+
+En résumé, l'utilisation de Supervisor avec Django et Gunicorn peut offrir une gestion de processus fiable, une automatisation de la configuration, une surveillance des processus et une facilité de configuration, permettant ainsi de simplifier le déploiement et la gestion de l'application.
+
+### Configuration de gunicorn
+
+Notre serveur gunicorn et contrôlé et automatisé par supervisor. Le fichier de configuration [/etc/supervisor/conf.d/wepynaire-gunicorn.conf](wepynaire-gunicorn.conf).
+
+Un fois que ce fichier de configuration est placé dans le bon répertoire, on peut exécuter les commandes suivantes:
+- `$ sudo supervisorctl reread` pour demander à supervisor de le lire
+- `$ sudo supervisorctl update` pour demander à supervisor de mettre à jour son exécution avec les nouvelles configurations
+- `$ sudo supervisorctl status` pour vérifier si notre processus gunicorn est bien en cours d'exécution.
