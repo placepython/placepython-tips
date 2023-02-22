@@ -3,28 +3,32 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
+# dev-specific requriements for local work
 [packages]
 django = "*"
-django-extensions = "*"
 python-webpack-boilerplate = "*"
 crispy-bootstrap5 = "*"
 django-environ = "*"
+django-extensions = "*"
 psycopg2-binary = "*"
+gunicorn = "*"
 django-markdownify = "*"
 pygments = "*"
 pillow = "*"
-gunicorn = "*"
 
+# production-specific requirements for the server
 [production]
 django = "*"
-django-extensions = "*"
 python-webpack-boilerplate = "*"
 crispy-bootstrap5 = "*"
 django-environ = "*"
+django-extensions = "*"
 psycopg2 = "*"
+gunicorn = "*"
 django-markdownify = "*"
 pygments = "*"
 pillow = "*"
+
 
 [requires]
 python_version = "3.10"
