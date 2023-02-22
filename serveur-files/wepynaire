@@ -1,0 +1,38 @@
+# On défini l'addresse et le port sur lesquelles écoute notre serveur WSGI (gunicorn)
+upstream gunicorn_server {
+    server 127.0.0.1:8000 fail_timeout=0;
+}
+
+# On configurer nginx pour les connexion à partir de notre adresse IP ou à partir de 
+# notre nom de domaine
+server { 
+    
+    # port sur lequel on va recevoir les connexions HTTP de nos visiteurs
+    listen 80; 
+    # adresse ip et nom de domaine utilisés par nos visiteurs
+    server_name 163.172.184.213 wepynaire.placepython.ch; 
+        
+    # définition du répertoire dans lequel se trouvent les fichiers statiques
+    location /static/ {
+        alias /home/wepynaire/wepynaire/staticfiles/;
+    }
+
+    # définition du répertoire dans lequel se trouvent les fichiers de media (téléversés par l'utilisateur)
+    location /media/ {
+        alias /home/wepynaire/wepynaire/media/;
+    }
+
+    # lorsque l'utilisateur se connecte à la racine, si le fichier n'existe pas, on envoie la requête
+    # à gunicorn pour traiter la demande avec Django
+    location / {
+        try_files $uri @proxy_to_django;
+    }
+
+    # configuration du proxy pour envoyer les requêtes vers gunicorn (notre serveur wsgi) et donc vers
+    # notre application django
+    location @proxy_to_django {
+        include proxy_params;
+        proxy_redirect off;
+        proxy_pass http://gunicorn_server;
+    }
+}
