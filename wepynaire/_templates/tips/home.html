@@ -36,7 +36,9 @@
         />
         </a>
         <div class="card-body">
-          <h5 class="card-title">{{ tip.title }}</h5>
+          <a href="{% url 'tips:detail' slug=tip.slug %}">
+            <h5 class="card-title">{{ tip.title }}</h5>
+          </a>
           <div>
             {% for category in tip.categories.all %}
             <span class="badge bg-secondary col text-dark">{{ category.name }}</span> 
