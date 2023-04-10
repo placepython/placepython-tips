@@ -2,7 +2,7 @@ version: "3.9"
 services:
     postgres:
         container_name: wepynaire_deploiement_postgres_29327_container
-        image: postgres:latest
+        image: postgres:14
         working_dir: /app
         restart: always
         ports:
